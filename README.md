@@ -10,6 +10,7 @@ My work focuses on **separating facts from claims**, **bytes from meaning**, and
 
 ### 🔐 HALO-RECEIPTS
 **Minimal cryptographic receipts for byte-exact, SSH-signed audit artifacts.**
+**Status: Private system. Available by inquiry for partnership/collaboration.**
 
 HALO-RECEIPTS proves only one thing:
 > That specific bytes existed and were signed by a specific key.
@@ -22,11 +23,9 @@ Those interpretations are handled downstream via formal lenses (security, govern
 ---
 
 ### 🕯 Lantern
-**An interpretive framework and system for reasoning *about* artifacts without contaminating them.**
-
-Lantern treats meaning as **external, contextual, and revisable** — never embedded into the artifact itself.  
-It is designed for audits, governance review, post-incident analysis, and AI-assisted interpretation.
-
+**An interpretive inspection framework for reasoning about fixed evidence artifacts.**
+Lantern does not assert truth, intent, or legitimacy. It demonstrates how conclusions change under explicit interpretive lenses.
+Designed for audits, governance review, post-incident analysis, and AI-assisted interpretation.
 → https://github.com/Swixixle/Lantern
 
 ---
