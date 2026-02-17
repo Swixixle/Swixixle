@@ -99,6 +99,8 @@ async def ai_call(
         rejection_reason = "No active policy for environment"
     else:
         # For MVP: Simple approval (in production, evaluate policy logic)
+        # TODO: Implement rule engine to evaluate policy_logic against request
+        # Example: Check if client_id matches allowed list, quota limits, etc.
         approved = True
         policy_version_hash = active_pointer.policy_version_hash
         policy_change_ref = f"pcr_{active_pointer.change_request_id}" if active_pointer.change_request_id else None
@@ -110,6 +112,11 @@ async def ai_call(
     multimodal_hash = hash_content(request.multimodal_data)
     
     # Stub AI provider call (for MVP)
+    # TODO: Replace with actual AI provider integration (OpenAI, Anthropic, etc.)
+    # Production implementation should:
+    # 1. Forward request to configured AI provider
+    # 2. Handle provider errors and retries
+    # 3. Record actual token usage and latency
     if approved:
         # Simulate AI response
         output_text = "[STUBBED RESPONSE] This is a mock AI response for MVP testing."

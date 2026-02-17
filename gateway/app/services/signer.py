@@ -10,11 +10,14 @@ import os
 import json
 import base64
 import hashlib
+import logging
 from typing import Dict, Any
 from pathlib import Path
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.backends import default_backend
+
+logger = logging.getLogger(__name__)
 
 
 class SignerService:
@@ -81,7 +84,7 @@ class SignerService:
                     format=serialization.PublicFormat.SubjectPublicKeyInfo
                 ))
             
-            print(f"Generated new RSA keypair in {self.keys_dir}")
+            logger.info(f"Generated new RSA keypair in {self.keys_dir}")
     
     def get_key_id(self) -> str:
         """

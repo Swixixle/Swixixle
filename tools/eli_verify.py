@@ -244,9 +244,13 @@ def verify_signature(packet: Dict[str, Any], jwk: Dict[str, Any]) -> Dict[str, A
         if jwk.get("kty") != "RSA":
             return {"valid": False, "error": f"Unsupported key type: {jwk.get('kty')}"}
         
+        # Helper to add correct base64url padding
+        def add_padding(b64url_str):
+            return b64url_str + "=" * (4 - len(b64url_str) % 4)
+        
         # Convert JWK to public key
-        n = int.from_bytes(base64.urlsafe_b64decode(jwk["n"] + "=="), byteorder='big')
-        e = int.from_bytes(base64.urlsafe_b64decode(jwk["e"] + "=="), byteorder='big')
+        n = int.from_bytes(base64.urlsafe_b64decode(add_padding(jwk["n"])), byteorder='big')
+        e = int.from_bytes(base64.urlsafe_b64decode(add_padding(jwk["e"])), byteorder='big')
         
         public_numbers = rsa.RSAPublicNumbers(e, n)
         public_key = public_numbers.public_key(default_backend())
