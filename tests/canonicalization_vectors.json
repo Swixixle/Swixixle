@@ -1,0 +1,91 @@
+[
+  {
+    "description": "Empty object",
+    "input": {},
+    "canonical_json": "{}",
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  {
+    "description": "Simple object with sorted keys",
+    "input": {
+      "z": "last",
+      "a": "first",
+      "m": "middle"
+    },
+    "canonical_json": "{\"a\":\"first\",\"m\":\"middle\",\"z\":\"last\"}",
+    "sha256": "41d4c7df095932154cd6cb6671d5029329a9333061589cfc9191591e181b94d5"
+  },
+  {
+    "description": "Nested object with sorted keys",
+    "input": {
+      "outer_z": {
+        "inner_b": 2,
+        "inner_a": 1
+      },
+      "outer_a": "value"
+    },
+    "canonical_json": "{\"outer_a\":\"value\",\"outer_z\":{\"inner_a\":1,\"inner_b\":2}}",
+    "sha256": "2a5add0b01efc277152052c715f310255a85a6917fa8a8920ec1d38c1fda495a"
+  },
+  {
+    "description": "Array preserves order",
+    "input": [
+      3,
+      1,
+      2
+    ],
+    "canonical_json": "[3,1,2]",
+    "sha256": "51bda7ab4e44726cde71fcb6e4b515357059bb6b6dd5146d1fc50f73f11678c6"
+  },
+  {
+    "description": "String with unicode",
+    "input": {
+      "message": "Hello \u4e16\u754c"
+    },
+    "canonical_json": "{\"message\":\"Hello \u4e16\u754c\"}",
+    "sha256": "5610f793920f232dbcee9bc089936aa2609ce9f7424a5d41231bc1197eecad32"
+  },
+  {
+    "description": "Boolean and null values",
+    "input": {
+      "bool_false": false,
+      "bool_true": true,
+      "null_value": null
+    },
+    "canonical_json": "{\"bool_false\":false,\"bool_true\":true,\"null_value\":null}",
+    "sha256": "e8fedaf00fe30ecbf43bb36c93fc2b3b4a88d0e50ee083d2b2ae85db5f26aaac"
+  },
+  {
+    "description": "Numbers (integer and float)",
+    "input": {
+      "float": 3.14159,
+      "integer": 42,
+      "negative": -17
+    },
+    "canonical_json": "{\"float\":3.14159,\"integer\":42,\"negative\":-17}",
+    "sha256": "1066ffb950b80932f6388e0170e74c0dc067bb5df36f042662489e4c66f150e9"
+  },
+  {
+    "description": "Empty array",
+    "input": [],
+    "canonical_json": "[]",
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "description": "Complex nested structure",
+    "input": {
+      "transaction_id": "tx_001",
+      "metadata": {
+        "timestamp": "2024-01-01T00:00:00Z",
+        "client": "test_client"
+      },
+      "data": [
+        1,
+        2,
+        3
+      ]
+    },
+    "canonical_json": "{\"data\":[1,2,3],\"metadata\":{\"client\":\"test_client\",\"timestamp\":\"2024-01-01T00:00:00Z\"},\"transaction_id\":\"tx_001\"}",
+    "sha256": "264cc164075f7f5fe29ba797483ffd9ae4d0ecc89cd04585718a7e66e50bd0d3"
+  }
+]
