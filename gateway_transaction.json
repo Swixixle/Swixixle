@@ -1,0 +1,45 @@
+{
+  "transaction_id": "tx_122445641cd54c3a",
+  "gateway_timestamp_utc": "2026-02-17T14:14:50.240564Z",
+  "environment": "production",
+  "client_id": "client_abc",
+  "intent_manifest": "chat_completion",
+  "feature_tag": "gpt4",
+  "user_ref": "user_123",
+  "prompt_hash": "sha256:115049a298532be2f181edb03f766770c0db84c22aff39003fec340deaec7545",
+  "rag_hash": null,
+  "multimodal_hash": null,
+  "policy_receipt_subset": {
+    "policy_version_hash": "sha256:4628c06859aac2894583f6ebd7689fd723b21b547b54a7d6bc38e60917d72071",
+    "approved": true,
+    "policy_change_ref": "pcr_1",
+    "rejection_reason": null
+  },
+  "model_fingerprint": "gpt-4-0613",
+  "param_snapshot": {
+    "temperature": 0.7,
+    "max_tokens": 100
+  },
+  "output_hash": "sha256:b2d570ef25c2db241dd5b557da55ed680e1975831381523584f3df8a1c8e9f01",
+  "token_usage": {
+    "prompt": 45,
+    "completion": 15,
+    "total": 60
+  },
+  "latency_ms": 150,
+  "client_key_fingerprint": "sha256:client_client_abc_fp",
+  "halo_chain": {
+    "block_1": "sha256:b3167b4cdc9e75520020222b157c639647987d7498cfd88e67dd8a5ae725a831",
+    "block_2": "sha256:564cb97d520cfaa795dacd340b34ca19305efc79bae0d6fa41bca63bb4b5f449",
+    "block_3": "sha256:6a82d0794f20977291c4a1ff7d561fc14056a1f02e3dd345e5f2da04127994dd",
+    "block_4": "sha256:1e504a2e5dc0c6160fad26d4cedfabd6f3c8ae164d7cda916c2a8685bc5f835e",
+    "final_hash": "sha256:fa9c533ab6d6a31a1f8df5b5f73411c5c61cf0cc41e4886261ece1820f7961e8"
+  },
+  "verification": {
+    "signature": {
+      "alg": "RS256",
+      "key_id": "sha256:a1eb4ca7f42baff91a5a79bf0d10c60c393d3a7663f6e15fb1fbe0ebe432239a",
+      "signature_b64": "eTCr1p3FtekrV+jwS57P4vEut1RuODRk8TAadP+sREsWIXgRo1Y4xURDslyX1nZBExwy4RMkk9IXb/Tq932sp24nXaeApOmbJqEKOfqzgn9nrO/NK+SlBeZdq1on3mKE0mvUkEOZO8OvcQBAOQT9KmE7Bbf1YXy+H29a9JLSMjFB+kTeyvdogVLKHmchA76HtYwuisOx6NaL/1Yv9/+E6cVotUE6CCUSCWaJdG2lK37FHDacwAc5LfNDvmZYO7LG8xIJ3LOHwmbQQBlTABvWXW8YOTQ5RFbWCmEcYqUB7raLpYWE71RJwU1jYAG+grNFhC0UyrP/QLpkOEsbJWQlKQ=="
+    }
+  }
+}
