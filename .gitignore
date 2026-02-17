@@ -48,3 +48,7 @@ gateway/.keys/
 # OS
 .DS_Store
 Thumbs.db
+
+# Test files
+tampered_packet.json
+test_packet.json
